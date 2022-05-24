@@ -3,7 +3,7 @@ import 'package:dj_pedido/mobile/components/input/input.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +57,11 @@ class LoginPage extends StatelessWidget {
                   ],
                 ),
                 DJActionButton(
+                  acao: () {
+                    Navigator.of(context).pushReplacementNamed('/home');
+                  },
                   nomeBotao: 'Entrar',
+                  cor: Color.fromARGB(255, 180, 126, 103),
                 ),
                 SizedBox(
                   height: 50,

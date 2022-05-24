@@ -1,10 +1,17 @@
+// ignore_for_file: prefer_typing_uninitialized_variables
+
 import 'package:flutter/material.dart';
 
 class DJActionButton extends StatelessWidget {
-  String nomeBotao = 'Nome Vazio';
+  String nomeBotao;
+  Color cor;
+  void Function() acao;
+
   DJActionButton({
     Key? key,
     required this.nomeBotao,
+    required this.cor,
+    required this.acao,
   }) : super(key: key);
 
   @override
@@ -13,11 +20,11 @@ class DJActionButton extends StatelessWidget {
       width: 300,
       height: 60,
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 180, 126, 103),
+        color: cor,
         borderRadius: BorderRadius.circular(100),
       ),
       child: TextButton(
-        onPressed: () {},
+        onPressed: acao,
         child: Text(
           nomeBotao,
           style: TextStyle(
