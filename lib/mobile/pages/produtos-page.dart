@@ -5,6 +5,7 @@ import 'package:dj_pedido/mobile/components/appbar/app-bar-secundario.dart';
 import 'package:dj_pedido/mobile/components/categorias/categorias-produtos.dart';
 import 'package:dj_pedido/mobile/components/select-produto/select-produto.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class ProdutosPage extends StatelessWidget {
   const ProdutosPage({Key? key}) : super(key: key);
@@ -22,13 +23,13 @@ class ProdutosPage extends StatelessWidget {
                 icone1: Icomoon.home,
                 icone2: Icomoon.search2,
                 titulo: 'Produtos',
-                padding: 100,
+                padding: Adaptive.h(10),
               ),
               DjCategoriasComponent(),
               Column(
                 children: [
                   Container(
-                    height: 360,
+                    height: Adaptive.h(61.5),
                     color: Colors.white,
                     child: ListView(
                       // ignore: prefer_const_literals_to_create_immutables

@@ -1,6 +1,7 @@
 import 'package:dj_pedido/icomoon_icons.dart';
 import 'package:dj_pedido/mobile/components/appbar/app-bar.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -21,12 +22,13 @@ class HomePage extends StatelessWidget {
       ),
       body: GridView.count(
         crossAxisCount: 3,
-        children: List.generate(7, (index) {
+        children: List.generate(11, (index) {
           return Center(
             child: GestureDetector(
               child: Container(
-                height: 100,
-                width: 100,
+                margin: EdgeInsets.all(Adaptive.h(1)),
+                height: 120,
+                width: 120,
                 decoration: BoxDecoration(
                   boxShadow: [
                     (index > 0

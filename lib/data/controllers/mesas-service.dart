@@ -1,0 +1,3 @@
+class MesasController {
+  mesaAtiva() {}
+}

@@ -4,6 +4,8 @@ import 'package:dj_pedido/mobile/components/buttons/adicionar-produto-pedido.dar
 import 'package:dj_pedido/mobile/components/card/card.dart';
 import 'package:dj_pedido/mobile/components/linha-produto/linha-produto.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class DetalhesMesaPage extends StatelessWidget {
   const DetalhesMesaPage({Key? key}) : super(key: key);
@@ -20,7 +22,7 @@ class DetalhesMesaPage extends StatelessWidget {
             padding: 10,
           ),
           DjCard(
-            altura: 530,
+            altura: Adaptive.h(80),
             filho: Column(
               children: [
                 Padding(

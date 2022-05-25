@@ -1,12 +1,12 @@
 import 'package:dj_pedido/mobile/components/buttons/action-button/action-button.dart';
 import 'package:dj_pedido/mobile/components/linha-produto/linha-produto-preco.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../icomoon_icons.dart';
 import '../components/appbar/app-bar-secundario.dart';
 import '../components/buttons/adicionar-produto-pedido.dart';
 import '../components/card/card.dart';
-import '../components/linha-produto/linha-produto.dart';
 
 class CheckoutMesaPage extends StatelessWidget {
   const CheckoutMesaPage({Key? key}) : super(key: key);
@@ -23,7 +23,7 @@ class CheckoutMesaPage extends StatelessWidget {
             padding: 10,
           ),
           DjCard(
-            altura: 530,
+            altura: Adaptive.h(80),
             filho: Column(
               children: [
                 Padding(

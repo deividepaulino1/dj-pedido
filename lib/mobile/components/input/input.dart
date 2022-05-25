@@ -2,10 +2,16 @@ import 'package:flutter/material.dart';
 
 class DjInput extends StatelessWidget {
   String label;
+  TextEditingController controller;
+  final String Function(String?) validator;
+  TextInputType keyboardType;
 
   DjInput({
     Key? key,
     this.label = '',
+    required this.controller,
+    required this.validator,
+    this.keyboardType = TextInputType.text,
   }) : super(key: key);
 
   @override
@@ -26,6 +32,9 @@ class DjInput extends StatelessWidget {
             ),
           ),
           TextFormField(
+            keyboardType: keyboardType,
+            validator: validator,
+            controller: controller,
             decoration: InputDecoration(
                 // label: Text('Label aqui'),
                 filled: true,
