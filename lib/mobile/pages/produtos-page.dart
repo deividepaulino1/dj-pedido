@@ -58,10 +58,10 @@ class ProdutosPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Mesa 1',
+                            'Comanda #0001',
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 24,
+                              fontSize: 20,
                               fontFamily: 'secundaria',
                               fontWeight: FontWeight.w400,
                             ),

@@ -1,15 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'dart:convert';
-import 'dart:developer';
-
 import 'package:dj_pedido/data/controllers/login-service.dart';
 import 'package:dj_pedido/mobile/components/buttons/action-button/action-button.dart';
 import 'package:dj_pedido/mobile/components/input/input.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:http/http.dart' as http;
 
 final _ctrlLogin = TextEditingController();
 final _ctrlSenha = TextEditingController();
@@ -94,6 +89,7 @@ class LoginPage extends StatelessWidget {
                         _formKey.currentState!.validate();
                         var validarLogin = await LoginService()
                             .fazerLogin1(_ctrlLogin.text, _ctrlSenha.text);
+                        _formKey.currentState!.reset();
 
                         if (validarLogin) {
                           Navigator.pushReplacementNamed(context, '/home');

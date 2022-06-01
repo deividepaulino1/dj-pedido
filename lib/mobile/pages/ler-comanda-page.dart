@@ -25,7 +25,7 @@ class LerComandaPage extends StatelessWidget {
                       width: 20,
                     ),
                     Text(
-                      'Comanda',
+                      'Mesa 1',
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w500,
@@ -42,7 +42,7 @@ class LerComandaPage extends StatelessWidget {
                 children: [
                   DJActionButton(
                     acao: () {
-                      Navigator.pushNamed(context, '/qr-code');
+                      Navigator.pushNamed(context, '/produtos');
                     },
                     nomeBotao: 'Nova comanda',
                     cor: Colors.grey.shade600,
@@ -51,8 +51,10 @@ class LerComandaPage extends StatelessWidget {
                     height: 20,
                   ),
                   DJActionButton(
-                    acao: () {},
-                    nomeBotao: 'Ler Comanda',
+                    acao: () {
+                      Navigator.pushNamed(context, '/produtos');
+                    },
+                    nomeBotao: 'Utilizar a mesa',
                     cor: Colors.grey.shade600,
                   ),
                 ],
