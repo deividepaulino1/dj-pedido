@@ -22,7 +22,8 @@ class DjSelectProdutoComponent extends StatelessWidget {
                     height: 30,
                     width: 30,
                     decoration: BoxDecoration(
-                      border: Border.all(width: 1, color: Colors.grey),
+                      border: Border.all(
+                          width: 1, color: Theme.of(context).accentColor),
                       borderRadius: BorderRadius.circular(50),
                     ),
                   ),
@@ -35,7 +36,7 @@ class DjSelectProdutoComponent extends StatelessWidget {
                         fontSize: 22,
                         fontFamily: 'none',
                         fontWeight: FontWeight.w600,
-                        color: Colors.grey.shade800),
+                        color: Theme.of(context).accentColor),
                   ),
                 ],
               ),
@@ -44,7 +45,7 @@ class DjSelectProdutoComponent extends StatelessWidget {
                   'Adicionais',
                   style: TextStyle(
                     fontFamily: 'none',
-                    color: Colors.grey.shade800,
+                    color: Theme.of(context).accentColor,
                   ),
                 ),
                 onPressed: () {

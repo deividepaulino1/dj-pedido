@@ -49,9 +49,10 @@ class LoginPage extends StatelessWidget {
                         Text(
                           'pedido',
                           style: TextStyle(
-                              fontFamily: 'pacifico',
-                              fontSize: 30,
-                              color: Colors.grey[800]),
+                            fontFamily: 'pacifico',
+                            fontSize: 30,
+                            color: Theme.of(context).primaryColor,
+                          ),
                         ),
                       ],
                     ),

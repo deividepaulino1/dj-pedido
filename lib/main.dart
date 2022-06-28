@@ -1,4 +1,5 @@
 import 'package:dj_pedido/mobile/components/qrcode-reader/qrcode.dart';
+import 'package:dj_pedido/mobile/pages/cfg-page.dart';
 import 'package:dj_pedido/mobile/pages/checkout-mesa.dart';
 import 'package:dj_pedido/mobile/pages/detalhes-mesa.dart';
 import 'package:dj_pedido/mobile/pages/home-page.dart';
@@ -6,20 +7,28 @@ import 'package:dj_pedido/mobile/pages/init.dart';
 import 'package:dj_pedido/mobile/pages/ler-comanda-page.dart';
 import 'package:dj_pedido/mobile/pages/login-page.dart';
 import 'package:dj_pedido/mobile/pages/produtos-page.dart';
+import 'package:dj_pedido/theme/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MultiProvider(
+      providers: [
+        ChangeNotifierProvider<ThemeChanger>(
+          create: (_) => ThemeChanger(),
+        )
+      ],
+      child: DjPedido(),
+    ));
 
-class MyApp extends StatelessWidget {
-  MyApp({Key? key}) : super(key: key);
+class DjPedido extends StatelessWidget {
+  DjPedido({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    bool darkThemeEnabled = Provider.of<ThemeChanger>(context).isDark();
+
     return ResponsiveSizer(builder: (context, orientation, deviceType) {
       return MaterialApp(
         onGenerateRoute: (settings) {
@@ -78,16 +87,22 @@ class MyApp extends StatelessWidget {
                 settings: settings,
                 reverseDuration: Duration(milliseconds: 300),
               );
+            case '/cfg':
+              return PageTransition(
+                child: ConfiguracoesPage(),
+                type: PageTransitionType.leftToRight,
+                settings: settings,
+                reverseDuration: Duration(milliseconds: 200),
+              );
             default:
               return null;
           }
         },
         debugShowCheckedModeBanner: false,
         title: 'DJ-Pedido',
-        theme: ThemeData(
-          primarySwatch: Colors.brown,
-          fontFamily: 'principal',
-        ),
+        theme: ThemeChanger().light,
+        darkTheme: ThemeChanger().dark,
+        themeMode: darkThemeEnabled ? ThemeMode.dark : ThemeMode.light,
         initialRoute: '/',
       );
     });

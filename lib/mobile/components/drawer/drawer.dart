@@ -24,7 +24,9 @@ class DjDrawer extends Drawer {
                         ],
                       )),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/cfg');
+                      },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [

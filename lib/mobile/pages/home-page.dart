@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
       endDrawer: DjDrawer(context),
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(80),
-        child: DjAppBar(),
+        child: DjAppBar('Mesas', context),
       ),
       body: AnimationLimiter(
         child: GridView.count(
@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
                           boxShadow: [
                             (index > 0
                                 ? BoxShadow(
-                                    color: Colors.grey.withOpacity(0),
+                                    color: Colors.grey.withOpacity(0.9),
                                   )
                                 : BoxShadow(
                                     color: Colors.black.withOpacity(0.6),
@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
                           ],
                           borderRadius: BorderRadius.circular(10),
                           color: (index > 0
-                              ? Color.fromARGB(255, 105, 123, 115)
+                              ? Color.fromARGB(25, 105, 123, 115)
                               : Color.fromARGB(255, 180, 126, 103)),
                         ),
                         child: Column(
@@ -67,9 +67,9 @@ class HomePage extends StatelessWidget {
                                 child: Text(
                                   '$index',
                                   style: TextStyle(
-                                    fontSize: 32,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                                      fontSize: 32,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.brown),
                                 ),
                               ),
                             ),

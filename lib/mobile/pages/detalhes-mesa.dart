@@ -5,7 +5,6 @@ import 'package:dj_pedido/mobile/components/card/card.dart';
 import 'package:dj_pedido/mobile/components/linha-produto/linha-produto.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 
 class DetalhesMesaPage extends StatelessWidget {
   const DetalhesMesaPage({Key? key}) : super(key: key);
@@ -55,14 +54,14 @@ class DetalhesMesaPage extends StatelessWidget {
                 DjLinhaProdutoComponent(),
                 DjLinhaProdutoComponent(),
                 SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 TextButton(
                   onPressed: () {},
                   child: Text(
                     'Enviar Pedido',
                     style: TextStyle(
-                      color: Colors.grey.shade800,
+                      color: Theme.of(context).accentColor,
                       fontSize: 36,
                       fontWeight: FontWeight.bold,
                     ),

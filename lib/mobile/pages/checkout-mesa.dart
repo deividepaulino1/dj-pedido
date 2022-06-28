@@ -100,7 +100,7 @@ class CheckoutMesaPage extends StatelessWidget {
                   child: Text(
                     'Adicionar produto',
                     style: TextStyle(
-                      color: Colors.grey.shade800,
+                      color: Theme.of(context).accentColor,
                       fontSize: 36,
                       fontWeight: FontWeight.bold,
                     ),

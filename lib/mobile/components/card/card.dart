@@ -18,15 +18,15 @@ class DjCard extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       // height: 65,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Theme.of(context).primaryColor,
         border: Border.all(
           width: 0,
-          color: Colors.grey,
+          color: Theme.of(context).accentColor,
         ),
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
+            color: Colors.grey.withOpacity(0.1),
             spreadRadius: 3,
             blurRadius: 3,
             offset: Offset(0, 1), // changes position of shadow

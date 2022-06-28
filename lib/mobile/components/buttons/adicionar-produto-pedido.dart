@@ -11,7 +11,7 @@ class DjBtnAdicionarProdutoPedido extends StatelessWidget {
           children: [
             Icon(
               Icons.add_circle_rounded,
-              color: Colors.grey.shade600,
+              color: Theme.of(context).accentColor,
               size: 50,
             ),
             SizedBox(
@@ -23,7 +23,7 @@ class DjBtnAdicionarProdutoPedido extends StatelessWidget {
                 fontFamily: 'none',
                 fontSize: 16,
                 fontWeight: FontWeight.w300,
-                color: Colors.black,
+                color: Theme.of(context).accentColor,
               ),
             ),
           ],

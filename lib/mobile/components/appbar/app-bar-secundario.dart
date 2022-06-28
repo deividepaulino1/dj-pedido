@@ -42,10 +42,11 @@ class DjAppBarSecundario extends StatelessWidget {
                 Text(
                   titulo,
                   style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: 'secundaria',
-                      color: Colors.grey[700]),
+                    fontSize: 24,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: 'secundaria',
+                    color: Theme.of(context).accentColor,
+                  ),
                 ),
               ],
             ),
@@ -54,7 +55,7 @@ class DjAppBarSecundario extends StatelessWidget {
                 Icon(
                   icone1,
                   size: 30,
-                  color: Colors.grey.shade800,
+                  color: Theme.of(context).accentColor,
                 ),
                 SizedBox(
                   width: 30,
@@ -62,7 +63,7 @@ class DjAppBarSecundario extends StatelessWidget {
                 Icon(
                   icone2,
                   size: 30,
-                  color: Colors.grey.shade800,
+                  color: Theme.of(context).accentColor,
                 ),
               ],
             ),

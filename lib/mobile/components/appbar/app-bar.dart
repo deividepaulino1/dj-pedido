@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class DjAppBar extends AppBar {
-  DjAppBar()
+  DjAppBar(titulo, context)
       : super(
           toolbarHeight: 100,
           elevation: 0,
-          backgroundColor: Colors.grey[300],
+          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
           iconTheme: IconThemeData(color: Colors.grey[700]),
           title: Row(
             children: [
@@ -22,7 +22,7 @@ class DjAppBar extends AppBar {
                 width: 10,
               ),
               Text(
-                'Mesas',
+                titulo,
                 style: TextStyle(
                     fontSize: 20,
                     fontFamily: 'secundaria',

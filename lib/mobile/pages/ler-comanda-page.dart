@@ -9,7 +9,7 @@ class LerComandaPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
-          color: Colors.grey[100],
+          color: Theme.of(context).scaffoldBackgroundColor,
           child: Column(
             children: [
               Padding(
@@ -52,7 +52,7 @@ class LerComandaPage extends StatelessWidget {
                   ),
                   DJActionButton(
                     acao: () {
-                      Navigator.pushNamed(context, '/produtos');
+                      Navigator.pushNamed(context, '/qr-code');
                     },
                     nomeBotao: 'Utilizar a mesa',
                     cor: Colors.grey.shade600,

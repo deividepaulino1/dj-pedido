@@ -9,14 +9,17 @@ class DjCategoriasComponent extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: 55,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Theme.of(context).primaryColor,
         border: Border(
-          bottom: BorderSide(
-            //                   <--- left side
-            color: Colors.grey.shade600,
-            width: 1,
-          ),
-        ),
+            bottom: BorderSide(
+              //                   <--- left side
+              color: Theme.of(context).accentColor,
+              width: 0.4,
+            ),
+            top: BorderSide(
+              color: Theme.of(context).accentColor,
+              width: 0.4,
+            )),
       ),
       child: ListView(
         scrollDirection: Axis.horizontal,
@@ -29,10 +32,10 @@ class DjCategoriasComponent extends StatelessWidget {
               left: 20,
             ),
             decoration: BoxDecoration(
-                color: Colors.grey.shade300,
+                color: Theme.of(context).primaryColor,
                 border: Border(
                     bottom: BorderSide(
-                  color: Colors.grey.shade600,
+                  color: Colors.grey.shade500,
                   width: 7,
                 ))),
             child: TextButton(
@@ -43,7 +46,7 @@ class DjCategoriasComponent extends StatelessWidget {
                     fontSize: 22,
                     fontFamily: 'none',
                     fontWeight: FontWeight.w400,
-                    color: Colors.grey[800]),
+                    color: Theme.of(context).accentColor),
               ),
             ),
           ),
@@ -55,7 +58,7 @@ class DjCategoriasComponent extends StatelessWidget {
                   fontSize: 22,
                   fontFamily: 'none',
                   fontWeight: FontWeight.w400,
-                  color: Colors.grey[800]),
+                  color: Theme.of(context).accentColor),
             ),
           ),
           TextButton(
@@ -66,7 +69,7 @@ class DjCategoriasComponent extends StatelessWidget {
                   fontSize: 22,
                   fontFamily: 'none',
                   fontWeight: FontWeight.w400,
-                  color: Colors.grey[800]),
+                  color: Theme.of(context).accentColor),
             ),
           ),
           TextButton(
@@ -77,7 +80,7 @@ class DjCategoriasComponent extends StatelessWidget {
                   fontSize: 22,
                   fontFamily: 'none',
                   fontWeight: FontWeight.w400,
-                  color: Colors.grey[800]),
+                  color: Theme.of(context).accentColor),
             ),
           ),
         ],

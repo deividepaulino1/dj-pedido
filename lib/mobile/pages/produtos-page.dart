@@ -15,7 +15,7 @@ class ProdutosPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
-          color: Colors.grey[200],
+          color: Theme.of(context).primaryColor,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -30,7 +30,7 @@ class ProdutosPage extends StatelessWidget {
                 children: [
                   Container(
                     height: Adaptive.h(61.5),
-                    color: Colors.white,
+                    color: Theme.of(context).primaryColor,
                     child: ListView(
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
@@ -51,7 +51,7 @@ class ProdutosPage extends StatelessWidget {
                   Container(
                     height: 78,
                     width: MediaQuery.of(context).size.width,
-                    color: Colors.grey.shade700,
+                    color: Theme.of(context).backgroundColor,
                     child: Padding(
                       padding: const EdgeInsets.only(left: 30, right: 30),
                       child: Row(
@@ -60,7 +60,7 @@ class ProdutosPage extends StatelessWidget {
                           Text(
                             'Comanda #0001',
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.grey.shade100,
                               fontSize: 20,
                               fontFamily: 'secundaria',
                               fontWeight: FontWeight.w400,

@@ -17,7 +17,7 @@ class AdicionaisModal extends StatelessWidget {
         children: [
           Container(
             height: Adaptive.h(100),
-            color: Colors.grey[300],
+            color: Theme.of(context).primaryColor,
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -127,14 +127,14 @@ class AdicionaisModal extends StatelessWidget {
                         decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.grey.withOpacity(0.2),
-                              spreadRadius: 3,
-                              blurRadius: 3,
+                              color: Colors.grey.withOpacity(0.3),
+                              spreadRadius: 1,
+                              blurRadius: 1,
                               offset:
                                   Offset(0, 1), // changes position of shadow
                             )
                           ],
-                          color: Colors.white,
+                          color: Theme.of(context).primaryColor,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Container(
@@ -182,7 +182,7 @@ class AdicionaisModal extends StatelessWidget {
                                   Offset(0, 1), // changes position of shadow
                             )
                           ],
-                          color: Colors.white,
+                          color: Theme.of(context).primaryColor,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Container(
